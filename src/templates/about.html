@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css_file %}
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block header %}
+<img class="logo" src="{% static 'image/logo.png' %}" alt="Shri">
+<div class="header-right">
+    <a class="home" href="/">Home</a>
+    <a class="about" id="active" href="{% url 'about' %}">About</a>
+    <a class="terms_and_conditions" href="{% url 'terms_and_conditions' %}">Terms & Conditions</a>
+</div>
+{% endblock %}
+
+
+{% block content %}
+<div class="about">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam iure esse, modi illo illum tenetur cupiditate harum
+    libero eum minus. Ut, facere dolores. Ad soluta fugiat facilis vero consequatur harum, vitae veritatis laborum, culpa
+    eaque architecto temporibus rerum repellendus expedita natus? Quia eligendi recusandae quis eos! Iste molestiae fugit
+    doloribus molestias beatae ipsum, id accusantium ut eligendi tempore est culpa error amet repudiandae hic eum sequi rem
+    dolore numquam inventore saepe odio. Officia consequatur consectetur ad, at rem accusamus quia corrupti, quod blanditiis
+    doloribus necessitatibus illo ducimus dolorum minus debitis aut? Deleniti expedita necessitatibus illum iusto
+    voluptatem, dolorem natus quibusdam nihil perspiciatis optio sequi rem vitae, libero autem, odit laboriosam molestias
+    facilis a quis at veritatis! Eos fuga eum amet consectetur autem aliquam deserunt voluptatem aspernatur vitae voluptas
+    maxime placeat earum sequi ad, possimus non reprehenderit numquam dolor voluptatum pariatur ut a blanditiis provident.
+    Sit doloremque laborum nostrum, ad mollitia ut corrupti magnam eum reiciendis. Earum est dolorum placeat, esse cum dolor
+    velit ratione nam deleniti magni? Numquam officia explicabo vitae expedita corporis ad, cum illum quibusdam dolorem sit,
+    quo dolores aperiam itaque saepe. Veniam atque optio nobis distinctio iure excepturi accusamus consequuntur quasi
+    repudiandae quibusdam reprehenderit voluptatum necessitatibus fuga qui tempore sapiente hic, nemo assumenda quos quod,
+    in ducimus modi. Qui ratione, assumenda consequatur voluptates eveniet vero dolore tempora exercitationem ab provident
+    in commodi aliquid dignissimos maxime error excepturi fuga vitae quia repellat suscipit quisquam voluptate! Mollitia,
+    cum. Ullam voluptate consectetur a esse assumenda adipisci temporibus vel fugiat velit dolorum ipsam autem consequatur
+    voluptates minus id enim tempora, rem reiciendis iusto quia eos provident aspernatur fuga. Dolorem, sit alias. Placeat
+    temporibus dolorum iusto ab eligendi sapiente cupiditate, cumque dignissimos reiciendis possimus, ipsum dolores maxime
+    ut saepe quibusdam mollitia porro, sit alias cum nostrum accusantium. Fugit eaque commodi quos provident aspernatur, sit
+    natus voluptatem molestias, non a voluptas aliquam ex dolore eligendi nemo perspiciatis, earum delectus? Quis minus a
+    suscipit dolorem placeat, eligendi inventore, eaque sequi porro molestias illum? Eaque, itaque exercitationem corporis
+    necessitatibus ipsam porro quasi recusandae deleniti neque a amet unde suscipit tenetur quos facilis tempora doloribus
+    rerum, magni totam voluptates sit ratione animi! Repudiandae sint hic quia provident. Quae nesciunt perspiciatis
+    consequatur, cupiditate laborum in autem pariatur sapiente nostrum mollitia cumque facere inventore accusantium numquam
+    similique molestias illum iusto suscipit aut, et officia deserunt? Quia itaque possimus ab nihil blanditiis suscipit
+    dolorem provident debitis eos! Culpa, ipsa cupiditate voluptates alias nostrum doloribus harum accusantium blanditiis
+    quam eum optio fugit ipsam ea suscipit. Sapiente, impedit cupiditate repellendus consequatur labore ab minima ratione
+    enim delectus consectetur nesciunt cum tempora, itaque accusamus tempore atque aliquam nobis ullam saepe quis!
+    Voluptatum accusantium vel illum at, quas quam ducimus asperiores maiores molestias facilis voluptate ex odio inventore
+    quia quisquam, quod recusandae commodi. Quasi, non modi et porro obcaecati dicta sunt, laborum unde, fugiat itaque
+    sapiente labore. Optio quaerat omnis facilis officiis amet laborum necessitatibus, cumque, quis esse, rem quo ullam. Et,
+    quam. Natus, repudiandae? In ipsa minima saepe maiores unde soluta vero.
+<div>
+{% endblock %}

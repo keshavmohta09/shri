@@ -1,0 +1,54 @@
+
+body {
+    margin-top: 7%;
+    margin-bottom: 7%;
+}
+
+.body2 { 
+    margin: 0 auto;
+    width: 45%;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+.header {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    padding: 20px 10px;
+  }
+
+.header a:hover {
+background-color: rgb(228, 193, 128);
+color: black;
+}
+
+.header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+  }
+
+.header a#active {
+background-color: dodgerblue;
+color: white;
+}
+
+.header-right {
+    float: right;
+  }
+
+
+.header .logo{
+    width: 5%;
+    height: 3%;
+}
+
+footer{
+    background: #f1f1f1;
+    height: auto;
+    color: black;
+}

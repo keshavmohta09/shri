@@ -2,7 +2,7 @@ from django.core.exceptions import ValidationError
 from django.db import models
 from helpers.models import BaseModel
 
-from products.constants import MAXIMUM_DAYS_LIMIT_REACHED
+from products.constants import MAXIMUM_DAYS_LIMIT_REACHED, PRODUCT_EMAIL_ALREADY_EXISTS
 
 
 class Product(BaseModel):
@@ -35,5 +35,12 @@ class ProductEmail(BaseModel):
         if self.days_limit > self.MAX_DAYS_LIMIT:
             raise ValidationError(MAXIMUM_DAYS_LIMIT_REACHED)
 
+    def validate_product_email(self):
+        if ProductEmail.objects.filter(
+            product_id=self.product_id, email=self.email, date_deleted__isnull=True
+        ).exists():
+            raise ValidationError(PRODUCT_EMAIL_ALREADY_EXISTS)
+
     def clean(self):
         self.validate_days_limit()
+        self.validate_product_email()

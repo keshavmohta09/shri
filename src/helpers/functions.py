@@ -11,6 +11,7 @@ def send_email(receivers: Iterable[str], message: Text) -> None:
     password = os.environ["SENDER_EMAIL_PASSWORD"]
     message = message
     context = ssl.create_default_context()
+    print(message)
 
     with smtplib.SMTP(smtp_server, port) as server:
         server.starttls(context=context)

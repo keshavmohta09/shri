@@ -9,15 +9,18 @@
     {% endblock %}
 </head>
 <body>
-    <header class="header">
-    </header>
-    {% block content %}
-    {% endblock %}
-    <hr>
-    <footer>
-        <br>
-        <p class="p1">© 2021. Made by <b>Keshav Mohta</b></p><br>
-        <p class="p2">Shri, A price update notifier.</p>
-    </footer>
+    <div class="body2">
+        <header class="header">
+            {% block header %}
+            {% endblock %}
+        </header>
 
+        {% block content %}
+        {% endblock %}
+        <footer>
+            <p class="p1">© 2021. Made by Keshav Mohta & Sandeep Verma.</p><br>
+            <p class="p2">Shri, A price update notifier.</p>
+        </footer>
+    </div>
+    
 </body>

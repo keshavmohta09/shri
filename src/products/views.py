@@ -15,7 +15,7 @@ def home(request):
     return render(
         request=request,
         template_name="home.html",
-        context={"days_limit": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]},
+        context={"days_limit": [i for i in range(1, ProductEmail.MAX_DAYS_LIMIT + 1)]},
     )
 
 
@@ -63,3 +63,11 @@ def create_product_email(request):
         return redirect("home-page")
 
     return render(request=request, template_name="submit.html")
+
+
+def get_about(request):
+    return render(request, "about.html")
+
+
+def get_terms_and_conditions(request):
+    return render(request, "terms_and_conditions.html")

@@ -1,36 +1,50 @@
 {% extends 'base.html' %}
+
 {% load static %}
+
 {% block css_file %}
-    <!-- <link rel="stylesheet" href="{% static 'css/style_transfer_money.css' %}"> -->
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
 {% endblock %}
+
+{% block header %}
+<img class="logo" src="{% static 'image/logo.png' %}" alt="Shri">
+<div class="header-right">
+    <a class="home" id="active" href="/">Home</a>
+    <a class="about" href="{% url 'about' %}">About</a>
+    <a class="terms_and_conditions" href="{% url 'terms_and_conditions' %}">Terms & Conditions</a>
+</div>
+{% endblock %}
+
 {% block content %}
-    <div class="main">
-        <form action="{% url 'create-product-email' %}" method="POST">
+
+<div class="main">
+    <form action="{% url 'create-product-email' %}" method="POST">
         {% csrf_token %}
         <div class="form_details">
-            <br><br><br><br><br>
             <label for="email">Enter your email: </label>
-            <input type="string" id="email" name="email">
-            <br><br>
+            <input required type="string" id="email" name="email" placeholder="example@example.com">
+
             <label for="url">URL: </label>
-            <input type="string" id="url" name="url">
-            <br><br>
+            <input required type="string" id="url" name="url" placeholder="https://www.shri.com/eyebogler-black-shirt">
+
             <label for="days_limit">Days: </label>
             <select name="days_limit" id="days_limit">
                 {% for num in days_limit %}
                 <option value="{{num}}"> {{num}}</option>
                 {% endfor %}
             </select>
-            <br><br>
-            <div class="button">
-                <button class="btn1" type="submit">Submit</button><button class="btn2" type="reset">Reset</button>
-            </div>
+
+            <button class="submit-button" id="submit-button" type="submit">Submit</button>
+            <button class="reset-button" type="reset">Reset</button>
         </div>
-        </form><br>
-    </div>
-    <span class="message">
-        {% for message in messages %}
-        <h3>{{message}}</h3>
-        {% endfor %}
-    </span>
+    </form>
+</div>
+
+<span class="message">
+    {% for message in messages %}
+    <h3>{{message}}</h3>
+    {% endfor %}
+</span>
+
 {% endblock %}
