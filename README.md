@@ -1,2 +1,2 @@
 # shri
-A price update notifier
+A price alert system
